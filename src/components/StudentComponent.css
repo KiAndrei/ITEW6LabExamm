@@ -1,0 +1,229 @@
+.student-component {
+  margin: 0;
+}
+
+.student-card {
+  background: linear-gradient(180deg, #ffffff 0%, #fafbfc 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.05);
+  transition: box-shadow 0.3s, border-color 0.3s, transform 0.25s;
+  position: relative;
+  overflow: hidden;
+}
+
+.student-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #1b4332, #2d6a4f);
+  border-radius: 18px 18px 0 0;
+}
+
+.student-card:hover {
+  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.08);
+  border-color: #cbd5e1;
+  transform: translateY(-3px);
+}
+
+.student-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1b4332, #2d6a4f);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.student-name {
+  margin: 0 0 0.85rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+.student-info {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+.student-label {
+  font-weight: 600;
+  color: #334155;
+  margin-right: 0.35rem;
+}
+
+.student-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-toggle {
+  background: linear-gradient(135deg, #1b4332, #2d6a4f);
+  color: white;
+  box-shadow: 0 2px 8px rgba(27, 67, 50, 0.3);
+}
+
+.btn-toggle:hover {
+  box-shadow: 0 4px 12px rgba(27, 67, 50, 0.4);
+}
+
+.btn-count {
+  background: rgba(27, 67, 50, 0.08);
+  color: #1b4332;
+  border: 1px solid rgba(27, 67, 50, 0.2);
+}
+
+.btn-count:hover {
+  background: rgba(27, 67, 50, 0.12);
+}
+
+/* Modal */
+.student-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  animation: modalFadeIn 0.2s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.student-modal {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border: 1px solid #e2e8f0;
+  animation: modalSlideIn 0.25s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.student-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: #f1f5f9;
+  color: #64748b;
+  font-size: 1.5rem;
+  line-height: 1;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.student-modal-close:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.student-modal-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #1b4332, #2d6a4f);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 auto 1.25rem;
+}
+
+.student-modal-name {
+  text-align: center;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0 0 1.25rem;
+}
+
+.student-modal-details {
+  margin-bottom: 1.5rem;
+}
+
+.student-modal-details p {
+  margin: 0.6rem 0;
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+.student-modal-details .student-label {
+  display: inline-block;
+  min-width: 5.5rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.student-modal-email {
+  color: #1b4332;
+  text-decoration: none;
+}
+
+.student-modal-email:hover {
+  text-decoration: underline;
+}
+
+.student-modal-btn {
+  width: 100%;
+  padding: 0.65rem 1rem;
+}

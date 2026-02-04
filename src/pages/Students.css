@@ -1,0 +1,118 @@
+.students-page {
+  min-height: 100vh;
+  background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(27, 67, 50, 0.06), transparent),
+    linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.students-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  color: #555;
+}
+
+.loading-spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #e2e8f0;
+  border-top-color: #1b4332;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-state p {
+  margin-top: 1rem;
+}
+
+.error-state {
+  background: #fff5f5;
+  border: 1px solid #feb2b2;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  color: #c53030;
+}
+
+.error-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.error-state h3 {
+  margin: 0 0 0.5rem;
+}
+
+.error-state p {
+  margin: 0;
+}
+
+.api-list h2 {
+  color: #1e3a5f;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.user-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.user-item {
+  margin: 0;
+}
+
+.user-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.user-card h3 {
+  margin: 0 0 0.5rem;
+  color: #1e3a5f;
+  font-size: 1.1rem;
+}
+
+.user-username {
+  color: #2d5a87;
+  font-weight: 500;
+  margin: 0.25rem 0;
+}
+
+.user-email {
+  color: #555;
+  font-size: 0.9rem;
+  margin: 0.25rem 0;
+}
+
+.user-address {
+  color: #777;
+  font-size: 0.85rem;
+  margin: 0.5rem 0 0;
+}
+
+.no-data {
+  text-align: center;
+  color: #666;
+  padding: 2rem;
+}
